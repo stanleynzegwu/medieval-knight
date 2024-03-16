@@ -1,6 +1,7 @@
 import { OrbitControls } from "@react-three/drei";
 import Knight from "./Knight";
 import Scene from "./Scene";
+import Sword from "./Sword";
 
 const Experience = () => {
   return (
@@ -9,6 +10,7 @@ const Experience = () => {
       <directionalLight color={"#0000FF"} intensity={1.5} position={[-6, 8, 0]} />
       {/* <OrbitControls /> */}
       <Knight />
+      <Sword />
     </Scene>
   );
 };

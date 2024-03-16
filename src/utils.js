@@ -203,3 +203,75 @@ export const KNIGHT_ANIMATION = (knight) => {
 
   return AnimationsData
 }
+
+export const SWORD_ANIMATION = (sword) => {
+  let AnimationsData = [];
+
+  const SECTION4_ANIMATION = [
+    {
+      objectToAnimate: sword.scale,
+      properties: {
+        x: 0.3,
+        y: 0.3,
+        z: 0.3,
+      },
+      trigger: {
+        trigger: ".section5",
+        start: "top bottom",
+        end: "top center",
+      }
+    },
+    {
+      objectToAnimate: sword.position,
+      properties: {
+        x: -0.28,
+        y: 0.02,
+        z: 0.64
+      },
+      trigger: {
+        trigger: ".section5",
+        start: "top bottom",
+        end: "top center",
+      }
+    },
+    {
+      objectToAnimate: sword.rotation,
+      properties: {
+        x: -4.32,
+        y: 0.35,
+        z: 2.4
+      },
+      trigger: {
+        trigger: ".section5",
+        start: "top bottom",
+        end: "top center",
+      }
+    },
+  ]
+
+  AnimationsData = [...AnimationsData, ...SECTION4_ANIMATION];
+
+  return AnimationsData
+}
+
+export const BLOODSPLATTER_ANIMATION = (planeRef) => {
+  let AnimationsData = [];
+
+  const SECTION5_ANIMATION = [
+    {
+      objectToAnimate: planeRef,
+      properties: {
+        visible: true,
+      },
+      trigger: {
+        trigger: ".section5",
+        start: "top center",
+        end: "top center",
+      }
+    },
+  ]
+
+  AnimationsData = [...AnimationsData, ...SECTION5_ANIMATION];
+
+  return AnimationsData
+}
