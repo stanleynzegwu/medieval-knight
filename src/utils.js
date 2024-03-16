@@ -1,4 +1,4 @@
-export const KNIGHT_ANIMATION = (knight) => {
+export const KNIGHT_ANIMATION = (knight,yDifference) => {
   let AnimationsData = [];
 
   const SECTION2_ANIMATION = [
@@ -6,7 +6,7 @@ export const KNIGHT_ANIMATION = (knight) => {
       objectToAnimate: knight.position,
       properties: {
         z: -0.7,
-        y: -2.3,
+        y: -2.3 - yDifference,
       },
       trigger: {
         trigger: ".section2",
@@ -34,7 +34,7 @@ export const KNIGHT_ANIMATION = (knight) => {
       objectToAnimate: knight.position,
       properties: {
         x: -0.4,
-        y: -2.6,
+        y: -2.6 - yDifference,
         z: 0.42,
       },
       trigger: {
@@ -90,7 +90,7 @@ export const KNIGHT_ANIMATION = (knight) => {
       objectToAnimate: knight.position,
       properties: {
         x: 0.55,
-        y:-2.25,
+        y:-2.25 - yDifference,
         z: -0.5,
       },
       trigger: {
@@ -119,7 +119,7 @@ export const KNIGHT_ANIMATION = (knight) => {
       objectToAnimate: knight.position,
       properties: {
         x: 0,
-        y:-1.44,
+        y:-1.44 - yDifference,
         z: -0.34,
       },
       trigger: {
@@ -148,7 +148,7 @@ export const KNIGHT_ANIMATION = (knight) => {
       objectToAnimate: knight.position,
       properties: {
         x: 1,
-        y: -1.45,
+        y: -1.45 - yDifference,
         z: -2.1,
       },
       trigger: {
@@ -177,7 +177,7 @@ export const KNIGHT_ANIMATION = (knight) => {
       objectToAnimate: knight.position,
       properties: {
         x: 0,
-        y:-2.4,
+        y:-2.4 - yDifference,
         z: -0.2,
       },
       trigger: {
@@ -225,7 +225,7 @@ export const SWORD_ANIMATION = (sword) => {
       objectToAnimate: sword.position,
       properties: {
         x: -0.28,
-        y: 0.02,
+        y: 0.025,
         z: 0.64
       },
       trigger: {
@@ -269,9 +269,37 @@ export const BLOODSPLATTER_ANIMATION = (planeRef) => {
         end: "top center",
       }
     },
+    {
+      objectToAnimate: planeRef.scale,
+      properties: {
+        x: 1.1,
+        y: 1.1,
+        z: 1.1,
+      },
+      trigger: {
+        trigger: ".section5",
+        start: "top center",
+        end: "top top",
+      }
+    },
   ]
 
   AnimationsData = [...AnimationsData, ...SECTION5_ANIMATION];
 
   return AnimationsData
 }
+
+export const calculateYPosition = (width) => {
+  // Define the known points
+  const width1 = 1280; // width for scale 2.5
+  const yPosition1 = -2.5; // corresponding Y position
+  const width2 = 1000; // width for scale -1.95
+  const yPosition2 = -1.95; // corresponding Y position
+  
+  // Calculate the slope (change in Y over change in width)
+  const slope = (yPosition2 - yPosition1) / (width2 - width1);
+  // Calculate the Y position using linear interpolation
+  const yPosition = yPosition1 + slope * (width - width1);
+  
+  return yPosition;
+};

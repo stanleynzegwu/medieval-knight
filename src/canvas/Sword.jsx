@@ -17,7 +17,6 @@ const Sword = () => {
 
   useLayoutEffect(() => {
     new ScrollTrigger({});
-
     SWORD_ANIMATION(swordRef.current).map(({ objectToAnimate, properties, trigger }) => {
       tl.to(objectToAnimate, {
         ...properties,
@@ -65,7 +64,7 @@ const Sword = () => {
         // position={[position.x, position.y, position.z]}
         // rotation={[rotation.x, rotation.y, rotation.z]}
       />
-      <Plane ref={planeRef} args={[0.5, 0.5]} position={[-0.85, 0, 0]} visible={false}>
+      <Plane ref={planeRef} args={[0.45, 0.45]} position={[-0.85, 0, 0]} visible={false}>
         <meshBasicMaterial map={bloodSplatter} transparent depthTest={false} />
       </Plane>
     </>
