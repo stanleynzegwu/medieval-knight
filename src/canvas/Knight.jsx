@@ -13,8 +13,8 @@ const Knight = () => {
   const ratioScale = useMemo(() => {
     return Math.min(1.2, Math.max(0.5, size.width / 1280));
   }, [size.width]);
-  const knight_YPosition = calculateYPosition(size.width);
-  const yDifference = -2.5 - knight_YPosition; //difference in Y , gotten by subtrating default Y of the knight with the current Y
+  const knight_YPosition = useMemo(() => calculateYPosition(size.width));
+  const yDifference = useMemo(() => -2.5 - knight_YPosition, [size.width]); //difference in Y , gotten by subtrating default Y of the knight with the current Y
 
   /** GSAP */
   const tl = gsap.timeline();

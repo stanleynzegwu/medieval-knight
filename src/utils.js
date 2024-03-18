@@ -221,12 +221,25 @@ export const SWORD_ANIMATION = (sword) => {
         end: "top center",
       }
     },
+    // {
+    //   objectToAnimate: sword.position,
+    //   properties: {
+    //     x: -0.28,
+    //     y: 0.025,
+    //     z: 0.64
+    //   },
+    //   trigger: {
+    //     trigger: ".section5",
+    //     start: "top bottom",
+    //     end: "top center",
+    //   }
+    // },
     {
       objectToAnimate: sword.position,
       properties: {
-        x: -0.28,
-        y: 0.025,
-        z: 0.64
+        x: -0.53,
+        y: -0.01,
+        z: 0.34
       },
       trigger: {
         trigger: ".section5",
@@ -234,12 +247,25 @@ export const SWORD_ANIMATION = (sword) => {
         end: "top center",
       }
     },
+    // {
+    //   objectToAnimate: sword.rotation,
+    //   properties: {
+    //     x: -4.32,
+    //     y: 0.35,
+    //     z: 2.4
+    //   },
+    //   trigger: {
+    //     trigger: ".section5",
+    //     start: "top bottom",
+    //     end: "top center",
+    //   }
+    // },
     {
       objectToAnimate: sword.rotation,
       properties: {
-        x: -4.32,
-        y: 0.35,
-        z: 2.4
+        x: 0.04,
+        y: -5.72,
+        z:-4.20
       },
       trigger: {
         trigger: ".section5",
