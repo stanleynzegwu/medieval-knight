@@ -211,9 +211,9 @@ export const SWORD_ANIMATION = (sword) => {
     {
       objectToAnimate: sword.scale,
       properties: {
-        x: 0.3,
-        y: 0.3,
-        z: 0.3,
+        x: 0.4,
+        y: 0.4,
+        z: 0.4,
       },
       trigger: {
         trigger: ".section5",
@@ -237,7 +237,7 @@ export const SWORD_ANIMATION = (sword) => {
     {
       objectToAnimate: sword.position,
       properties: {
-        x: -0.53,
+        x: -0.50,
         y: -0.01,
         z: 0.34
       },

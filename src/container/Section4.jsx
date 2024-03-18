@@ -4,16 +4,16 @@ const Section4 = () => {
       <div className="w-[50%] flex flex-col gap-4">
         <div>
           <h2 className="uppercase text-gray-300 font-medium text-[3vw] tracking-tighter strokeText leading-[.75]">
-            about the
+            Armor and
           </h2>
           <span className="uppercase font-bold text-[6vw] tracking-tighter strokeText leading-[.75]">
-            project
+            Weapons
           </span>
         </div>
         <p className="text-[18px] text-gray-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quaerat reiciendis
-          veniam ea! Laborum magnam animi quibusdam nesciunt! veniam ea! Laborum magnam animi
-          quibusdam nesciunt!
+          Marvel at the craftsmanship of medieval armor and weaponry. From gleaming suits of plate
+          armor to mighty swords and lances, delve into the arsenal of the knights and learn about
+          the tools of their trade.
         </p>
       </div>
       <div className="w-[50%]"></div>
